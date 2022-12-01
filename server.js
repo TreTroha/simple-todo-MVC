@@ -6,9 +6,9 @@ const todoRoutes = require('./routes/todos')
 
 require('dotenv').config({path: './config/.env'})
 
-connectDB()
+connectDB() //This calls the Mongoose connect function found in line 3 ^
 
-app.set('view engine', 'ejs')
+app.set('view engine', 'ejs')  //This sets what view engine- eventually this will be React
 app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
